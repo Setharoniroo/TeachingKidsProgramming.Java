@@ -12,6 +12,7 @@ public class TurtleTree
     //    Make the tortoise go as fast as possible --#10
     Tortoise.setSpeed(10);
     //    Turn the background black  --#21
+    Tortoise.getBackgroundWindow().setColor(PenColors.Grays.Black);
     //    The current branch length = 60 --#1.2
     int currantbranch = 60;
     //    drawBranch(recipe below) --#2.1
