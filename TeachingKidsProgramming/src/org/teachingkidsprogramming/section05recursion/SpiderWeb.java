@@ -16,6 +16,7 @@ public class SpiderWeb
     //    The current length of a line is 10.5 pixels --#1.2  
     double currentlength = 10.5;
     //    The current zoom is 1.1 --#8.2
+    double currentZoom = 1.1;
     //    Do the following 10 times --#10.1
     //        weaveOneLayer (recipe below) --#9.1
     //
@@ -30,6 +31,7 @@ public class SpiderWeb
       //            Turn the tortoise 1/6th of 360 degrees to the right --#7
       Tortoise.turn(360 / 6);
       //            Increase the current length (of the line) by the current zoom --#8.1 
+      currentlength += currentZoom = currentlength;
       //        Repeat --#5.2
     }
     //        ------------- End of weaveOneLayer recipe --#9.3
