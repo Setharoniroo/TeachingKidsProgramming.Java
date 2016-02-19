@@ -16,7 +16,6 @@ public class SpiderWeb
     //    The current length of a line is 10.5 pixels --#1.2  
     double currentlength = 10.5;
     //    The current zoom is 1.1 --#8.2
-    double currentzoom = 1.1;
     //    Do the following 10 times --#10.1
     //        weaveOneLayer (recipe below) --#9.1
     //
@@ -26,12 +25,11 @@ public class SpiderWeb
     {
       //            drawTriangle (recipe below) --#4.1
       //
-      drawTriangle();
+      drawTriangle(currentlength);
       //
       //            Turn the tortoise 1/6th of 360 degrees to the right --#7
       Tortoise.turn(360 / 6);
       //            Increase the current length (of the line) by the current zoom --#8.1 
-      currentlength = currentlength + currentzoom;
       //        Repeat --#5.2
     }
     //        ------------- End of weaveOneLayer recipe --#9.3
@@ -39,14 +37,14 @@ public class SpiderWeb
     //        Change the current zoom so it is multiplied by 1.3 --#11
     //    Repeat --#10.2
   }
-  private static void drawTriangle()
+  private static void drawTriangle(double currentlength)
   {
-    //            ------------- Recipe for drawTriangle --#4.2
+    //    ------------- Recipe for drawTriangle --#4.2
     //            Do the following 3 times --#3.1
     for (int i = 0; i < 3; i++)
     {
       //                Move the tortoise the current length (of the line) --#1.1
-      Tortoise.move(1.1);
+      Tortoise.move(currentlength);
       //                Turn the tortoise 1/3rd of 360 degrees --#2
       Tortoise.turn(360 / 3);
       //            Repeat --#3.2
@@ -54,3 +52,4 @@ public class SpiderWeb
     //            ------------- End of drawTriangle recipe --#4.3
   }
 }
+// "a tiny change" -Mr Chuah
